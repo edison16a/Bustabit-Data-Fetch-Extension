@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Bustabit Statistics Extension",
+    "version": "1.0",
+    "description": "Fetches and displays Bustabit statistics.",
+    "permissions": [
+      "https://bustabit.com/statistics/",
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "ic_launcher.png",
+        "48": "ic_launcher.png",
+        "128": "ic_launcher.png"
+      }
+    },
+    "icons": {
+      "16": "ic_launcher.png",
+      "48": "ic_launcher.png",
+      "128": "ic_launcher.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://bustabit.com/statistics/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  

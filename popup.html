@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bustabit Statistics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2d2d2d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 300px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .progress-bar {
+      display: none;
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .progress {
+      height: 20px;
+      width: 0;
+      background-color: #4CAF50;
+      border-radius: 8px;
+      animation: load 5s linear forwards;
+    }
+    @keyframes load {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Bustabit Data Fetcher</h1>
+    <div id="statistics">
+      <p id="currentProfit"><strong>Current Profit:</strong> <span id="currentProfitValue"></span></p>
+      <p id="highWaterMark"><strong>High Water Mark:</strong> <span id="highWaterMarkValue"></span></p>
+
+    </div>
+    <button id="fetchButton" class="button">Fetch Data</button>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
